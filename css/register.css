@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black!important;
+    color: white!important;
+}
+
+h1 {
+    font-size: 2.3rem!important;
+}
+
+h2 {
+    font-size: 1.5rem!important;
+}
+
+h3 {
+    font-size: 1.2rem!important;
+}
+
+h4 {
+    font-size: 1rem!important;
+}
+
+section {
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+}
+
+.register {
+    width: 100%;
+    min-height: 100vh!important;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.card {
+    border: none!important;
+}
+
+.logo {
+    height: 40px;
+}
+
+.loginButton {
+    background-color: red!important;
+    border: none!important;
+    color: white!important;
+}
+
+.main-content {
+    border: none!important;
+    min-height: 70vh;
+    justify-content: center;
+    background: none!important;
+    text-align: center;
+    color: white;
+}
+
+.input {
+    min-width: 40vw;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.form-control {
+    line-height: 2!important;
+    border: none!important;
+    border-radius: 0%!important;
+}
+
+.register-button {
+    background-color: red!important;
+    border: none!important;
+    border-radius: 0%!important;
+    color: white!important;
+    line-height: 2!important;
+}
+
+.jumbo-item-wrapper {
+    background-color: black!important;
+    padding: 10px;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.accordion,
+.accordion-item,
+.accordion-button {
+    background-color: rgb(43, 43, 43)!important;
+    color: white!important;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+.accordion-button.collapsed::after {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' id='thin-x' viewBox='0 0 26 26' class='svg-icon svg-icon-thin-x svg-closed' focusable='true' style='fill:white;transform:rotate(-45deg)'><path d='M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z'></path></svg>")!important;
+}
+
+.accordion-button::after {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' id='thin-x' viewBox='0 0 26 26' class='svg-icon svg-icon-thin-x svg-closed' focusable='true' style='fill:white' ><path d='M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z'></path></svg>")!important;
+}
+
+.svg-icon-thin-x {
+    fill: #fff;
+}
+
+.accordion-button:active:after {
+    background: none!important;
+}
+
+.secondary-action {
+    background-color: black!important;
+    height: fit-content;
+    padding: 3rem 0!important;
+}
+
+.action-wrapper {
+    border: none!important;
+    justify-content: center;
+    background: none!important;
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-list {
+    column-count: 4;
+    list-style: none;
+    padding-left: 0%!important;
+}
+
+#footer-heading-text {
+    color: gray!important;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none!important;
+    color: gray!important;
+    line-height: 2rem;
+}
