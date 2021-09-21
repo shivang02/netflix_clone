@@ -40,6 +40,10 @@ section {
     position: relative;
 }
 
+.top {
+    padding-top: 2rem!important;
+}
+
 .logo {
     height: 40px;
 }

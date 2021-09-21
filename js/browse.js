@@ -1,0 +1,188 @@
+var sliderFilms = document.getElementById('films-slider-section');
+var sliderSeries = document.getElementById('series-slider-section');
+
+
+function scrollLeft(event) {
+    event.currentTarget.parentElement.lastChild.scrollLeft -= 250;
+}
+
+function scrollRight(event) {
+    event.currentTarget.parentElement.lastChild.scrollLeft += 250;
+}
+
+function changeContent(event) {
+    var films = document.getElementsByClassName('films');
+    var series = document.getElementsByClassName('series');
+    if (event.target.firstChild.textContent === "Films") {
+        films[0].style.display = "block";
+        series[0].style.display = "none";
+    } else {
+        films[0].style.display = "none";
+        series[0].style.display = "block";
+    }
+}
+
+function removeVideo() {
+    let body = document.getElementsByTagName('body');
+    let overlay = document.getElementsByClassName("overlay");
+    body[0].removeChild(overlay[0]);
+}
+
+function playVideo() {
+    let body = document.getElementsByTagName('body');
+    let overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    let videocontainer = document.createElement('video');
+    videocontainer.classList.add('video-player');
+    videocontainer.controls = true;
+    videocontainer.setAttribute('type', 'video/mp4');
+    let videoSource = document.createElement('source');
+    videoSource.setAttribute('src', '../assets/browse/video.mp4');
+    videoSource.setAttribute('type', 'video/mp4');
+    videocontainer.setAttribute('src', '../assets/browse/video.mp4');
+    overlay.appendChild(videocontainer);
+    overlay.addEventListener('click', removeVideo);
+    body[0].appendChild(overlay);
+}
+
+
+function closeFullView(event) {
+    event.currentTarget.parentElement.parentElement.removeChild(event.currentTarget.parentElement);
+}
+
+function expand(event) {
+    let data = event.currentTarget.dataset;
+    let targetElement = event.currentTarget.parentElement.parentElement;
+
+    if (targetElement.lastChild.classList[0] == "full-view") {
+        targetElement.removeChild(targetElement.lastChild);
+    }
+
+    let expandElement = document.createElement('div');
+    expandElement.classList.add('full-view');
+    let image = document.createElement('img');
+    image.src = data['source'] + "/large.webp";
+
+    let content = document.createElement('div');
+    content.classList.add('content', 'container');
+    let title = document.createElement('h1');
+    title.innerText = data['title'];
+    let summary = document.createElement('h4');
+    summary.innerText = data['summary'];
+    let playButton = document.createElement('button');
+    playButton.classList.add("play", "btn");
+    playButton.innerText = "Play";
+    playButton.addEventListener('click', playVideo);
+
+    let accIcon = document.createElement('div');
+    accIcon.classList.add('close-full-view');
+    let accIconImg = document.createElement('img');
+    accIconImg.src = "../images/icons/close-slim.webp";
+
+    accIcon.appendChild(accIconImg);
+    accIcon.addEventListener('click', closeFullView);
+
+    content.appendChild(title);
+    content.appendChild(summary);
+    content.appendChild(playButton);
+
+    expandElement.appendChild(accIcon);
+    expandElement.appendChild(content);
+    expandElement.appendChild(image);
+
+    targetElement.appendChild(expandElement);
+
+}
+
+
+function classifyData(raw) {
+    const FILMS = raw['films'];
+    const SERIES = raw['series'];
+
+    let classifiedFilms = {};
+    let classifiedSeries = {};
+
+    for (var film of FILMS) {
+        if (classifiedFilms[film['genre']]) {
+            classifiedFilms[film['genre']].push(film);
+        } else {
+            classifiedFilms[film['genre']] = [];
+            classifiedFilms[film['genre']].push(film);
+        }
+    }
+    for (var s of SERIES) {
+        if (classifiedSeries[s['genre']]) {
+            classifiedSeries[s['genre']].push(s);
+        } else {
+            classifiedSeries[s['genre']] = [];
+            classifiedSeries[s['genre']].push(s);
+        }
+    }
+
+    createSliders(sliderFilms, classifiedFilms, "films");
+    createSliders(sliderSeries, classifiedSeries, "series");
+}
+
+function createSliders(container, data, source) {
+
+    let genres = Object.keys(data);
+    let basePath = "../images/" + source;
+    for (let genre of genres) {
+        let sliderContainer = document.createElement('div');
+        sliderContainer.classList.add('slider-container', 'justify-content-center');
+
+        let sliderHeader = document.createElement('h2');
+        sliderHeader.classList.add('slider-header');
+        sliderHeader.innerText = genre;
+
+        let slider = document.createElement('div');
+        slider.classList.add("slider", "row", "flex-nowrap");
+
+        for (item of data[genre]) {
+            let sliderItem = document.createElement('div');
+            sliderItem.classList.add("slider-item", "col-lg-3", "col-md-4", "col-sm-8")
+            sliderItem.setAttribute('data-title', item['title']);
+            sliderItem.setAttribute('data-source', basePath + "/" + item['source']);
+            sliderItem.setAttribute('data-summary', item['summary']);
+            sliderItem.setAttribute('data-id', item['id']);
+            sliderItem.addEventListener('click', expand);
+
+            let sliderItemImg = document.createElement('img');
+            sliderItemImg.src = basePath + "/" + item['source'] + "/small.webp";
+
+            sliderItem.appendChild(sliderItemImg);
+            slider.appendChild(sliderItem);
+        }
+
+        let leftArrowButton = document.createElement('a');
+        leftArrowButton.classList.add('scroll-left');
+        leftArrowButton.innerHTML = "&#10094;"
+        leftArrowButton.addEventListener('click', scrollLeft);
+
+        let rightArrowButton = document.createElement('a');
+        rightArrowButton.classList.add('scroll-right');
+        rightArrowButton.innerHTML = "&#10095;"
+        rightArrowButton.addEventListener('click', scrollRight)
+
+
+        sliderContainer.appendChild(leftArrowButton);
+        sliderContainer.appendChild(rightArrowButton);
+
+        sliderContainer.appendChild(sliderHeader);
+        sliderContainer.appendChild(slider);
+        container.appendChild(sliderContainer);
+    }
+}
+
+
+
+
+
+
+fetch("../data/browse.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        classifyData(data);
+    });
