@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black!important;
+    color: white!important;
+}
+
+h1 {
+    font-size: 2.3rem!important;
+}
+
+h2 {
+    font-size: 1.5rem!important;
+}
+
+h3 {
+    font-size: 1.2rem!important;
+}
+
+h4 {
+    font-size: 1rem!important;
+}
+
+section {
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+}
+
+.signup {
+    width: 100%;
+    min-height: 100vh!important;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    height: 40px;
+}
+
+.card {
+    border: none!important;
+}
+
+.main-content {
+    border: none!important;
+    min-height: 70vh;
+    justify-content: center;
+    background: none!important;
+    color: white;
+    margin: 3rem 0;
+}
+
+.form-wrapper {
+    background-color: black;
+    padding: 5rem 2rem;
+    opacity: 0.8;
+}
+
+.input {
+    line-height: 2;
+    background-color: gray;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.input:active {
+    border: none!important;
+}
+
+.signup-button {
+    background-color: red!important;
+    color: white!important;
+}
+
+.form-wrapper a {
+    text-decoration: none!important;
+    color: white!important;
+}
+
+.form-wrapper h4 {
+    color: gray!important;
+}
+
+.footer {
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-list {
+    column-count: 4;
+    list-style: none;
+    padding-left: 0%!important;
+}
+
+#footer-heading-text {
+    color: gray!important;
+    margin-bottom: 2rem;
+}
+
+.footer a {
+    text-decoration: none!important;
+    color: gray!important;
+    line-height: 2rem;
+}

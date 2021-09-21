@@ -40,6 +40,10 @@ section {
     position: relative;
 }
 
+.neutral-anchor {
+    color: #fff!important;
+}
+
 .card {
     border: none!important;
 }
