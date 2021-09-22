@@ -25,6 +25,8 @@ function changeContent(event) {
 function removeVideo() {
     let body = document.getElementsByTagName('body');
     let overlay = document.getElementsByClassName("overlay");
+    let videocontainer = document.getElementsByClassName("video-player");
+    overlay[0].removeChild(videocontainer[0]);
     body[0].removeChild(overlay[0]);
 }
 
