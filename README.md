@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-<a title="Netflix, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Netflix_2015_logo.svg"><img width="512" alt="Netflix 2015 logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png"></a>
+<a title="Netflix, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Netflix_2015_logo.svg"><img width="512" alt="Netflix logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png"></a>
 <br>
   Netflix <i>clone</i>
   <br>
@@ -24,18 +24,67 @@
 ## Screenshots
 
 - **Desktop**<br>
-<img src="./assets/desktop-1.png" alt="Screenshot 1 (desktop)" width="400" style= "background-color: white">
+  - Landing Page<br>
+<img src="./screenshots/desktop_landing_1.png" alt="Screenshot 1 (desktop landing page)" width="400" style= "background-color: white">
 <br>
-<img src="./assets/desktop-2.png" alt="Screenshot 2 (desktop)" width="400" style= "background-color: white">
+<img src="./screenshots/desktop_landing_2.png" alt="Screenshot 2 (desktop landing page)" width="400" style= "background-color: white">
 <br>
-<img src="./assets/desktop-3.png" alt="Screenshot 3 (desktop)" width="400" style= "background-color: white">
+<img src="./screenshots/desktop_landing_3.png" alt="Screenshot 3 (desktop landing page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_landing_3_1.png" alt="Screenshot 4 (desktop landing page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_landing_4.png" alt="Screenshot 5 (desktop landing page)" width="400" style= "background-color: white">
+<br>
+
+  - Sign Up Page
+<img src="./screenshots/desktop_signup_1.png" alt="Screenshot 1 (desktop singup page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_signup_2.png" alt="Screenshot 2 (desktop singup page)" width="400" style= "background-color: white">
+<br>
+
+  - Sign In Page
+<img src="./screenshots/desktop_signin_1.png" alt="Screenshot 1 (desktop singin page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_signin_2.png" alt="Screenshot 1 (desktop singin page)" width="400" style= "background-color: white">
+<br>
+
+  - Browse Page
+<img src="./screenshots/desktop_browse_1.png" alt="Screenshot 1 (desktop browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_browse_2.png" alt="Screenshot 2 (desktop browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_browse_4.png" alt="Screenshot 3 (desktop browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/desktop_browse_3.png" alt="Screenshot 4 (desktop browse page)" width="400" style= "background-color: white">
+<br>
+
 
 - **Mobile**<br>
-<img src="./assets/mobile-1.png" alt="Screenshot 1 (mobile)" width="200" style= "background-color: white">
+  - Landing Page
+<img src="./screenshots/mobile_landing_1.png" alt="Screenshot 1 (mobile landing page)" width="400" style= "background-color: white">
 <br>
-<img src="./assets/mobile-2.png" alt="Screenshot 2 (mobile)" width="200" style= "background-color: white">
+
+  - Sign Up Page
+<img src="./screenshots/mobile_signup_1.png" alt="Screenshot 1 (mobile singup page)" width="400" style= "background-color: white">
 <br>
-<img src="./assets/mobile-3.png" alt="Screenshot 3 (mobile)" width="200" style= "background-color: white">
+<img src="./screenshots/mobile_signup_2.png" alt="Screenshot 2 (mobile singup page)" width="400" style= "background-color: white">
+<br>
+
+  - Sign In Page
+<img src="./screenshots/mobile_signin_1.png" alt="Screenshot 1 (mobile singin page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/mobile_signin_2.png" alt="Screenshot 1 (mobile singin page)" width="400" style= "background-color: white">
+<br>
+
+  - Browse Page
+<img src="./screenshots/mobile_browse_1.png" alt="Screenshot 1 (mobile browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/mobile_browse_2.png" alt="Screenshot 2 (mobile browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/mobile_browse_4.png" alt="Screenshot 3 (mobile browse page)" width="400" style= "background-color: white">
+<br>
+<img src="./screenshots/mobile_browse_3.png" alt="Screenshot 4 (mobile browse page)" width="400" style= "background-color: white">
+<br>
 
 ## How To Use
 
